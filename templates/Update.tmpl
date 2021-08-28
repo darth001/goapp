@@ -1,0 +1,23 @@
+{{ define "Update" }}
+    {{ template "Header" }}
+    {{ template "Menu" }}
+    <br>
+    <h1>Update Customer</h1>
+    <br>
+    <br>
+    <form method="post" action="/alter">
+        <input type="hidden" name="id" value="{{ .CustomerId }}"/>
+        <label>Customer Name:
+            <input type="text" name="customername" placeholder="customername" value="{{ .CustomerName }}" autofocus>
+        </label>
+        <br>
+        <br>
+        <label>SSN:
+            <input type="text" name="ssn" value="{{ .SSN }}" placeholder="ssn"/>
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="Update Customer"/>
+    </form>
+    {{ template "Footer" }}
+{{ end }}
